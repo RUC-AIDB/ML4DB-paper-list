@@ -64,6 +64,7 @@ Table of Contents
 * Towards instance-optimized data systems (VLDB 2021 from Tim Kraska)
 * Make Your Database System Dream of Electric Sheep: Towards Self-Driving Operation (VLDB 2021 from Andy Pavlo)
 * openGauss: An Autonomous Database System (VLDB 2021 from Guoliang Li)
+* Experience-Enhanced Learning: One Size Still does not Fit All in Automatic Database Management (arXiv 2021)
 ## Data Access
 ### Configuration Tuning
 * SARD: A statistical approach for ranking database tuning parameters (ICDEW, 2008)
@@ -84,6 +85,8 @@ Table of Contents
 * The Case for NLP-Enhanced Database Tuning: Towards Tuning Tools that "Read the Manual" (VLDB 2021)
 * CGPTuner: a Contextual Gaussian Process Bandit Approach for the Automatic Tuning of IT Configurations Under Varying Workload Conditions (VLDB 2021)
 * ResTune: Resource Oriented Tuning Boosted by Meta-Learning for Cloud Databases (SIGMOD 2021)
+* KML: Using Machine Learning to Improve Storage Systems (arXiv 2021)
+* Database Tuning using Natural Language Processing (SIGMOD Record 2021)
 ### Physical Design
 #### Learned structure
 * Stacked Filters: Learning to Filter by Structure (VLDB 2021)
@@ -120,6 +123,8 @@ Table of Contents
 * SPRIG: A Learned Spatial Index for Range and kNN Queries (SSTD 2021)
 * Benchmarking Learned Indexes (VLDB 2021)
 * Updatable Learned Index with Precise Positions (VLDB 2021)
+* The Case for Learned In-Memory Joins (arXiv 2021)
+* Bounding the Last Mile: Efficient Learned String Indexing (arXiv 2021)
 ##### Index Recommendation
 * Index Selection in a Self- Adaptive Data Base Management System （SIGMOD 1976）
 * AutoAdmin 'What-if' Index Analysis Utility (SIGMOD 1998)
@@ -201,6 +206,7 @@ Table of Contents
 * Fauce: Fast and Accurate Deep Ensembles with Uncertainty for Cardinality Estimation (VLDB 2021)
 * Cardinality Estimation in DBMS: A Comprehensive Benchmark Evaluation (arXiv 2021) [GitHub Link](https://github.com/Nathaniel-Han/End-to-End-CardEst-Benchmark)
 * Learned Cardinality Estimation: A Design Space Exploration and A Comparative Evaluation (VLDB 2022)
+* Glue: Adaptively Merging Single Table Cardinality to Estimate Join Query Size (aiXiv 2021)
 #### Data-based
 (kernal density model)
 * Self-Tuning, GPU-Accelerated Kernel Density Models for Multidimensional Selectivity Estimation (SIGMOD 2015)
@@ -285,7 +291,7 @@ Table of Contents
 * Bao: Learning to Steer Query Optimizers (2020)
 * ML-based Cross-Platform Query Optimization (ICDE 2020)
 * Learning-based Declarative Query Optimization (2021)
-* Bao: Making Learned Query Optimization Practical (SIGMOD 2021)
+* **Bao: Making Learned Query Optimization Practical** (SIGMOD 2021 **Best Paper**!) [Doc](https://rmarcus.info/bao_docs/introduction.html) [GitHub Link](https://github.com/learnedsystems/BaoForPostgreSQL)
 * Microlearner: A fine-grained Learning Optimizer for Big Data Workloads at Microsoft (2021)
 * Steering Query Optimizers: A Practical Take on Big Data Workloads (SIGMOD 2021)
 ## Query Execution
@@ -294,6 +300,7 @@ Table of Contents
 * Defeating duplicates: A re-design of the LearnedSort algorithm (aiXiv 2021)
 ### Join
 * SkinnerDB : Regret-Bounded Query Evaluation via Reinforcement Learning (VLDB 2018)
+* The Case for Learned In-Memory Joins (arXiv 2021)
 ### Adaptive Query Processing
 * Eddies: Continuously adaptive query processing. (SIGMOD 2000)
 * Micro adaptivity in Vectorwise (SIGMOD 2013)
