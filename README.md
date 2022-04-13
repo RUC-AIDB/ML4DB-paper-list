@@ -8,6 +8,11 @@ Welcome to PR!
 
 欢迎大家补充！
 
+
+## Stargazers over time
+
+[![Stargazers over time](https://starchart.cc/LumingSun/ML4DB-paper-list.svg)](https://starchart.cc/LumingSun/ML4DB-paper-list)
+
 Table of Contents
 =================
 * [System & Tutorial](#system-and-tutorial)
@@ -65,6 +70,8 @@ Table of Contents
 * Make Your Database System Dream of Electric Sheep: Towards Self-Driving Operation (VLDB 2021 from Andy Pavlo)
 * openGauss: An Autonomous Database System (VLDB 2021 from Guoliang Li)
 * Experience-Enhanced Learning: One Size Still does not Fit All in Automatic Database Management (arXiv 2021)
+* Baihe: SysML Framework for AI-driven Databases (arXiv 2022)
+* Survey on Learnable Databases: A Machine Learning Perspective (Big Data Research 2021)
 ## Data Access
 ### Configuration Tuning
 * SARD: A statistical approach for ranking database tuning parameters (ICDEW, 2008)
@@ -87,6 +94,7 @@ Table of Contents
 * ResTune: Resource Oriented Tuning Boosted by Meta-Learning for Cloud Databases (SIGMOD 2021)
 * KML: Using Machine Learning to Improve Storage Systems (arXiv 2021)
 * Database Tuning using Natural Language Processing (SIGMOD Record 2021)
+* Towards Dynamic and Safe Configuration Tuning for Cloud Databases (SIGMOD 2022)
 ### Physical Design
 #### Learned structure
 * Stacked Filters: Learning to Filter by Structure (VLDB 2021)
@@ -113,6 +121,7 @@ Table of Contents
 * The PGM-index: a fully-dynamic compressed learned index with provable worst-case bounds (VLDB 2020)
 * A Tutorial on Learned Multi-dimensional Indexes (SIGSPATIAL 2020)
 * Why Are Learned Indexes So Effective? (ICML 2020)
+* Learned Indexes for a Google-scale Disk-based Database (arXiv 2020)
 * Tsunami: A Learned Multi-dimensional Index for Correlated Data and Skewed Workloads (VLDB 2021)
 * A Lazy Approach for Efficient Index Learning (2021)
 * The RLR-Tree: A Reinforcement Learning Based R-Tree for Spatial Data (arXiv 2021)
@@ -125,6 +134,11 @@ Table of Contents
 * Updatable Learned Index with Precise Positions (VLDB 2021)
 * The Case for Learned In-Memory Joins (arXiv 2021)
 * Bounding the Last Mile: Efficient Learned String Indexing (arXiv 2021)
+* FINEdex: A Fine-grained Learned Index Scheme for Scalable and Concurrent Memory Systems (VLDB 2022)
+* The next 50 Years in Database Indexing or: The Case for Automatically Generated Index Structures (VLDB 2022)
+* The Concurrent Learned Indexes for Multicore Data Storage (Transactions on Storage 2022)
+* TONE: cutting tail-latency in learned indexes (CHEOPS 22)
+
 ##### Index Recommendation
 * Index Selection in a Self- Adaptive Data Base Management System （SIGMOD 1976）
 * AutoAdmin 'What-if' Index Analysis Utility (SIGMOD 1998)
@@ -135,6 +149,8 @@ Table of Contents
 * Magic mirror in my hand, which is the best in the land? An Experimental Evaluation of Index Selection Algorithms (VLDB 2020)
 * An Index Advisor Using Deep Reinforcement Learning (CIKM 2020)
 * DBA bandits: Self-driving index tuning under ad-hoc, analytical workloads with safety guarantees (ICDE 2021)
+* AutoIndex: An Incremental Index Management System for Dynamic Workloads (ICDE 2022)
+* SWIRL: Selection of Workload-aware Indexes using Reinforcement Learning (EDBT 2022)
 #### Schema & Partition
 
 ##### Offline
@@ -159,12 +175,15 @@ Table of Contents
 
 ## Workload
 
-### Resource Estimation and Auto-scaling
+### Resource Management and Auto-scaling
 
 * Automated Demand-driven Resource Scaling in Relational Database-as-a-Service (SIGMOD 2016)
 * Database Workload Capacity Planning using Time Series Analysis and Machine Learning (SIGMOD 2020)
 * Seagull: An Infrastructure for Load Prediction and Optimized Resource Allocation (VLDB 2020)
+* FIRM: An Intelligent Fine-grained Resource Management Framework for SLO-Oriented Microservices (OSDI 2020)
 * Optimal Resource Allocation for Serverless Queries (arXiv 2021)
+* sinan: ml-based and qos-aware resource management for cloud microservices (ASPLOS 2021)
+* Towards Optimal Resource Allocation for Big Data Analytics (EDBT 2022)
 
 ### Performance Diagnosis and Modeling
 
@@ -173,6 +192,7 @@ Table of Contents
 - A Top-Down Approach to Achieving Performance Predictability in Database Systems (SIGMOD 2017)
 - Diagnosing Root Causes of Intermittent Slow Queries in Cloud Databases (VLDB 2020)
 - Workload-Aware Performance Tuning for Autonomous DBMSs (ICDE 2021)
+- Sage: Practical and Scalable ML-Driven Performance Debugging in Microservices (ASPLOS 2021)
 
 ### Workload Shift Detection
 
@@ -207,6 +227,7 @@ Table of Contents
 * Cardinality Estimation in DBMS: A Comprehensive Benchmark Evaluation (arXiv 2021) [GitHub Link](https://github.com/Nathaniel-Han/End-to-End-CardEst-Benchmark)
 * Learned Cardinality Estimation: A Design Space Exploration and A Comparative Evaluation (VLDB 2022)
 * Glue: Adaptively Merging Single Table Cardinality to Estimate Join Query Size (aiXiv 2021)
+* Unsupervised Selectivity Estimation by Integrating Gaussian Mixture Models and an Autoregressive Model (EDBT 2022)
 #### Data-based
 (kernal density model)
 * Self-Tuning, GPU-Accelerated Kernel Density Models for Multidimensional Selectivity Estimation (SIGMOD 2015)
@@ -232,6 +253,7 @@ Table of Contents
 * FLAT: Fast, Lightweight and Accurate Method for Cardinality Estimation (VLDB 2021) [GitHub Link](https://github.com/wuziniu/FSPN)
 * Astrid: Accurate Selectivity Estimation for String Predicates using Deep Learning (VLDB 2021)
 * FACE: A Normalizing Flow based Cardinality Estimator (VLDB 2022)
+* Pre-training Summarization Models of Structured Datasets for Cardinality Estimation (VLDB 2022)
 #### Query-based
 * Adaptive selectivity estimation using query feedback (SIGMOD 1994)
 * Selectivity Estimation in Extensible Databases -A Neural Network Approach （VLDB 1998）
@@ -266,6 +288,7 @@ Table of Contents
 * Cost Models for Big Data Query Processing: Learning, Retrofitting, and Our Findings (2020)
 * DBMS Fitting: Why should we learn what we already know? (CIDR 2020)
 * A Note On Operator-Level Query Execution Cost Modeling (2020)
+* Zero-Shot Cost Models for Out-of-the-box Learned Cost Prediction (arXiv 2022)
 #### Concurrent
 * PQR: Predicting query execution times for autonomous workload management （ICAC 2008）
 * Performance Prediction for Concurrent Database Workloads (SIGMOD 2011)
@@ -275,6 +298,7 @@ Table of Contents
 * Contender: A Resource Modeling Approach for Concurrent Query Performance Prediction （EDBT 2014）
 * Query Performance Prediction for Concurrent Queries using Graph Embedding (VLDB 2020)
 * Efficient Deep Learning Pipelines for Accurate Cost Estimations Over Large Scale Query Workload (SIGMOD 2021)
+* 
 ### Join Optimization
 * Adaptive Optimization of Very Large Join Queries (SIGMOD 2018) (Not machine learning
 * Deep Reinforcement Learning for Join Order Enumeration (aiDM@SIGMOD 2018)
@@ -294,6 +318,8 @@ Table of Contents
 * **Bao: Making Learned Query Optimization Practical** (SIGMOD 2021 **Best Paper**!) [Doc](https://rmarcus.info/bao_docs/introduction.html) [GitHub Link](https://github.com/learnedsystems/BaoForPostgreSQL)
 * Microlearner: A fine-grained Learning Optimizer for Big Data Workloads at Microsoft (2021)
 * Steering Query Optimizers: A Practical Take on Big Data Workloads (SIGMOD 2021)
+* Balsa: Learning a Query Optimizer Without Expert Demonstrations (arXiv 2022)
+* Leveraging Query Logs and Machine Learning for Parametric Query Optimization (VLDB 2022)
 ## Query Execution
 ### Sort
 * The Case for a Learned Sorting Algorithm (SIGMOD 2020)
