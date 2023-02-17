@@ -1,17 +1,16 @@
 
-# [Paper List] AIDB / ML4DB / Autonomous Database / 智能数据库 / Self-driving Database
+# [Paper List] AI4DB / ML4DB / Autonomous Database / Self-driving Database / 智能数据库 / 自治数据库
+
 Paper list for database systems with artificial intelligence (machine learning, deep learning, reinforcement learning)
 
-有关机器学习、神经网络、强化学习、自调优技术等在数据库系统中的应用的文章列表
+New papers keep coming, remember to **Watch** this repo if you are interested in this topic.
+
+有关机器学习、神经网络、强化学习、自调优技术等在数据库系统中的应用的文章列表，列表持续更新中，记得按赞、分享、打开小铃铛！
 
 Welcome to PR!
 
 欢迎大家补充！
 
-
-## Stargazers over time
-
-[![Stargazers over time](https://starchart.cc/LumingSun/ML4DB-paper-list.svg)](https://starchart.cc/LumingSun/ML4DB-paper-list)
 
 Table of Contents
 =================
@@ -24,19 +23,22 @@ Table of Contents
     * [Index](#index)
       * [Index Structure](#index-structure)
       * [Index Recommendation](#index-recommendation)
+    * [Materialized View](#materialized-view)
     * [Schema &amp; Partition](#schema--partition)
       * [Offline](#offline)
       * [Online](#online)
+  * [Cache related](#cache-related)
 * [Workload](#workload)
     * [Resource Estimation and Auto-scaling](#resource-estimation-and-auto-scaling)
     * [Performance Diagnosis and Modeling](#performance-diagnosis-and-modeling)
     * [Workload Shift Detection](#workload-shift-detection)
     * [Metrics Prediction for Queries](#metrics-prediction-for-queries)
-    * [Workload Characterization](#workload-characterization)
+    * [Workload Characterization & Forecasting](#workload-characterization-&-forecasting)
 * [Query Optimization](#query-optimization)
-    * [Cardinality Estimation](#cardinality-estimation)
-      * [Data-based](#data-based)
-      * [Query-based](#query-based)
+   * [Query Rewrite](#query-write)
+   * [Cardinality Estimation](#cardinality-estimation)
+     * [Data-based](#data-based)
+     * [Query-based](#query-based)
   * [Cost Estimation](#cost-estimation)
     * [Single Query](#single-query)
     * [Concurrent](#Concurrent)
@@ -76,6 +78,8 @@ Table of Contents
 * Machine Learning for Data Management: A System View (ICDE 2022)
 * Tastes Great! Less Filling! High Performance and Accurate Training Data Collection for Self-Driving Database Management Systems (SIGMOD 2022)
 * SAM: Database Generation from Query Workload with Supervised Autoregressive Model (SIGMOD 2022)
+* Detect, Distill and Update: Learned DB Systems Facing Out of Distribution Data (SIGMOD 2023)
+* SageDB: An Instance-Optimized Data Analytics System (VLDB 2023)
 ## Data Access
 ### Configuration Tuning
 * SARD: A statistical approach for ranking database tuning parameters (ICDEW, 2008)
@@ -102,10 +106,13 @@ Table of Contents
 * Automatic Performance Tuning for Distributed Data Stream Processing Systems (ICDE 2022)
 * Adaptive Code Learning for Spark Configuration Tuning (ICDE 2022)
 * DB-BERT: A Database Tuning Tool that "Reads the Manual" (SIGMOD 2022)
-* Towards Dynamic and Safe Configuration Tuning for Cloud Databases (SIGMOD 2022)
 * HUNTER: An Online Cloud Database Hybrid Tuning System for Personalized Requirements (SIGMOD 2022)
 * LOCAT: Low-Overhead Online Configuration Auto-Tuning of Spark SQL Applications (SIGMOD 2022)
+* Facilitating Database Tuning with Hyper-Parameter Optimization: A Comprehensive Experimental Evaluation (VLDB 2022)
+* LlamaTune: Sample-Efficient DBMS Configuration Tuning (VLDB 2022)
+* BLUTune: Query-informed Multi-stage IBM Db2 Tuning via ML (CIKM 2022)
 ### Physical Design
+* Tiresias: Enabling Predictive Autonomous Storage and Indexing (VLDB 2022)
 #### Learned structure
 * Stacked Filters: Learning to Filter by Structure (VLDB 2021)
 * LEA: A Learned Encoding Advisor for Column Stores (aiDM 2021)
@@ -133,6 +140,8 @@ Table of Contents
 * A Tutorial on Learned Multi-dimensional Indexes (SIGSPATIAL 2020)
 * Why Are Learned Indexes So Effective? (ICML 2020)
 * Learned Indexes for a Google-scale Disk-based Database (arXiv 2020)
+* SIndex: A Scalable Learned Index for String Keys （APSys 2020)
+* XIndex: A Scalable Learned Index for Multicore Data Storage （PPoPP 2020)
 * Tsunami: A Learned Multi-dimensional Index for Correlated Data and Skewed Workloads (VLDB 2021)
 * A Lazy Approach for Efficient Index Learning (2021)
 * The RLR-Tree: A Reinforcement Learning Based R-Tree for Spatial Data (arXiv 2021)
@@ -155,27 +164,41 @@ Table of Contents
 * LHI: A Learned Hamming Space Index Framework for Efficient Similarity Search (SIGMOD 2022)
 * Entropy Learned Hashing: 10X Faster Hashing with Controllable Uniformity (SIGMOD 2022)
 * Tuning Hierarchical Learned Indexes on Disk and Beyond (SIGMOD 2022)
-
+* FLIRT: A Fast Learned Index for Rolling Time frames (EDBT 2022)
+* Testing the Robustness of Learned Index Structures (arXiv 2022)
+* The Case for ML-Enhanced High-Dimensional Indexes (2022)
+* A Learned Index for Exact Similarity Search in Metric Spaces (arxiv 2022)
+* PLIN: A Persistent Learned Index for Non-Volatile Memory with High Performance and Instant Recovery (VLDB 2023)
+* A Data-aware Learned Index Scheme for Efficient Writes (ICPP 2022)
+* Frequency Estimation in Data Streams: Learning the Optimal Hashing Scheme (TKDE)
+* FILM: A Fully Learned Index for Larger-Than-Memory Databases (VLDB 2023)
 ##### Index Recommendation
 * Index Selection in a Self- Adaptive Data Base Management System （SIGMOD 1976）
 * AutoAdmin 'What-if' Index Analysis Utility (SIGMOD 1998)
 * Self-Tuning Database Systems: A Decade of Progress (VLDB 2007)
-* AI Meets AI: Leveraging Query Executions to Improve Index Recommendations (SIGMOD 2019)
-* Automated Database Indexing using Model-free Reinforcement Learning (2020)
+* AI Meets AI: Leveraging Query Executions to Improve Index Recommendations (SIGMOD 2019) 
+* Automated Database Indexing using Model-free Reinforcement Learning (ICAPS 2020)
 * DRLindex: deep reinforcement learning index advisor for a cluster database (2020 Symposium on International Database Engineering & Applications)
-* Magic mirror in my hand, which is the best in the land? An Experimental Evaluation of Index Selection Algorithms (VLDB 2020)
-* An Index Advisor Using Deep Reinforcement Learning (CIKM 2020)
+* Magic mirror in my hand, which is the best in the land? An Experimental Evaluation of Index Selection Algorithms (VLDB 2020) [GitHub Link](https://github.com/hyrise/index_selection_evaluation)
+* An Index Advisor Using Deep Reinforcement Learning (CIKM 2020) [GitHub Link](https://github.com/rmitbggroup/IndexAdvisor)
 * DBA bandits: Self-driving index tuning under ad-hoc, analytical workloads with safety guarantees (ICDE 2021)
 * MANTIS: Multiple Type and Attribute Index Selection using Deep Reinforcement Learning (IDEAS 2021)
-* AutoIndex: An Incremental Index Management System for Dynamic Workloads (ICDE 2022)
-* SWIRL: Selection of Workload-aware Indexes using Reinforcement Learning (EDBT 2022)
+* AutoIndex: An Incremental Index Management System for Dynamic Workloads (ICDE 2022) [GitHub Link](https://github.com/zhouxh19/AutoIndex)
+* SWIRL: Selection of Workload-aware Indexes using Reinforcement Learning (EDBT 2022) [GitHub Link](https://github.com/hyrise/rl_index_selection)
 * Indexer++: workload-aware online index tuning with transformers and reinforcement learning (ACM SIGAPP SAC, 2022)
 * Budget-aware Index Tuning with Reinforcement Learning (SIGMOD 2022)
 * ISUM: Efficiently Compressing Large and Complex Workloads for Scalable Index Tuning (SIGMOD 2022)
-
-
+* DISTILL: Low-Overhead Data-Driven Techniques for Filtering and Costing Indexes for Scalable Index Tuning (VLDB 2022)
+* SmartIndex: An Index Advisor with Learned Cost Estimator (CIKM 2022)
+* HMAB: self-driving hierarchy of bandits for integrated physical database design tuning (VLDB 2022)
+* Learned Index Benefits: Machine Learning Based Index Performance Estimation (VLDB 2023)
+### Materialized View
+* Automatic View Generation with Deep Learning and Reinforcement Learning (ICDE 2020)
+* An Autonomous Materialized View Management System with Deep Reinforcement Learning (ICDE 2021)
+* A Technical Report on Dynamic Materialized View Management using Graph Neural Network
+* Dynamic Materialized View Management using Graph Neural Network (ICDE 2023)
+* HMAB: self-driving hierarchy of bandits for integrated physical database design tuning (VLDB 2022)
 #### Schema & Partition
-
 ##### Offline
 
 * Schism: a Workload-Driven Approach to Database Replication and Partitioning (VLDB 2010)
@@ -188,13 +211,16 @@ Table of Contents
 * Lachesis: Automated Partitioning for UDF-Centric Analytics (VLDB 2021)
 * Instance-Optimized Data Layouts for Cloud Analytics Workloads (SIGMOD 2021)
 * Jigsaw: A Data Storage and Query Processing Engine for Irregular Table Partitioning (SIGMOD 2021)
-
+* Dalton: Learned Partitioning for Distributed Data Streams (VLDB 2023)
 ##### Online
 
 - Relax and Let the Database Do the Partitioning Online (BIRTE 2011)
 - SWORD: Scalable Workload-Aware Data Placement for Transactional Workloads (EDBT 2013)
 - Online Data Partitioning in Distributed Database Systems (EDBT 2015)
 - A Robust Partitioning Scheme for Ad-Hoc Query Workloads (SOCC 2017)
+
+### Cache related
+* A Learned Cache Eviction Framework with Minimal Overhead (arXiv 2023)
 
 ## Workload
 
@@ -207,6 +233,9 @@ Table of Contents
 * Optimal Resource Allocation for Serverless Queries (arXiv 2021)
 * sinan: ml-based and qos-aware resource management for cloud microservices (ASPLOS 2021)
 * Towards Optimal Resource Allocation for Big Data Analytics (EDBT 2022)
+* Tenant Placement in Over-subscribed Database-as-a-Service Clusters (VLDB 2022)
+* Fine-Grained Modeling and Optimization for Intelligent Resource Management in Big Data Processing (arXiv 2022)
+* SIMPPO: a scalable and incremental online learning framework for serverless resource management (SoCC 2022)
 
 ### Performance Diagnosis and Modeling
 
@@ -229,7 +258,7 @@ Table of Contents
 * Predicting multiple metrics for queries: Better decisions enabled by machine learning (ICDE 2009)
 * Learning-based SPARQL query performance modeling and prediction (WWW 2017)
 
-### Workload Characterization
+### Workload Characterization & Forecasting
 
 * On Workload Characterization of Relational Database Environments (TSE 1992)
 * Workload Models for Autonomic Database Management Systems (International Conference on Autonomic and Autonomous Systems 2006)
@@ -239,6 +268,8 @@ Table of Contents
 * Explaining Inference Queries with Bayesian Optimization (VLDB 2021)
 * Statistical Schema Learning with Occam's Razor (SIGMOD 2022)
 * Intelligent Automated Workload Analysis for Database Replatforming (SIGMOD 2022)
+* Stitcher: Learned Workload Synthesis from Historical Performance Footprints (EDBT 2022)
+* DBAugur: An Adversarial-based Trend Forecasting System for Diversified Workloads (ICDE 2023)
 
 ## Query Optimization
 ### Query Rewrite
@@ -284,6 +315,7 @@ Table of Contents
 * Astrid: Accurate Selectivity Estimation for String Predicates using Deep Learning (VLDB 2021)
 * FACE: A Normalizing Flow based Cardinality Estimator (VLDB 2022)
 * Pre-training Summarization Models of Structured Datasets for Cardinality Estimation (VLDB 2022)
+* Cardinality Estimation of Approximate Substring Queries using Deep Learning (VLDB 2022)
 #### Query-based
 * Adaptive selectivity estimation using query feedback (SIGMOD 1994)
 * Selectivity Estimation in Extensible Databases -A Neural Network Approach （VLDB 1998）
@@ -307,7 +339,7 @@ Table of Contents
 * Flow-Loss: Learning Cardinality Estimates That Matter (VLDB 2021)
 * Warper: Efficiently Adapting Learned Cardinality Estimators to Data and Workload Drifts (SIGMOD 2022)
 * Lightweight and Accurate Cardinality Estimation by Neural Network Gaussian Process for Approximate Complex Event Processing (SIGMOD 2022)
-
+* Enhanced Featurization of Queries with Mixed Combinations of Predicates for ML-based Cardinality Estimation (EDBT 2023)
 ### Cost Estimation
 #### Single Query
 * Statistical learning techniques for costing XML queries (VLDB 2005)
@@ -320,7 +352,11 @@ Table of Contents
 * Cost Models for Big Data Query Processing: Learning, Retrofitting, and Our Findings (2020)
 * DBMS Fitting: Why should we learn what we already know? (CIDR 2020)
 * A Note On Operator-Level Query Execution Cost Modeling (2020)
-* Zero-Shot Cost Models for Out-of-the-box Learned Cost Prediction (arXiv 2022)
+* Zero-Shot Cost Models for Out-of-the-box Learned Cost Prediction (VLDB 2022)
+* Efficient Learning with Pseudo Labels for Query Cost Estimation (CIKM 2022)
+* gCBO: A Cost-based Optimizer for Graph Databases (CIKM 2022)
+* QueryFormer: A Tree Transformer Model for Query Plan Representation (VLDB 2022)
+
 #### Concurrent
 * PQR: Predicting query execution times for autonomous workload management （ICAC 2008）
 * Performance Prediction for Concurrent Database Workloads (SIGMOD 2011)
@@ -337,6 +373,8 @@ Table of Contents
 * Learning to Optimize Join Queries With Deep Reinforcement Learning (ArXiv)
 * Reinforcement Learning with Tree-LSTM for Join Order Selection (ICDE 2020)
 * Research Challenges in Deep Reinforcement Learning-based Join Query Optimization (aiDM 2020)
+* Efficient Join Order Selection Learning with Graph-based Representation (KDD 2022)
+* SOAR:A Learned Join Order Selector with Graph Attention Mechanism （IJCNN 2022）
 ### Query Plan
 * Plan Selection Based on Query Clustering （VLDB 2002)
 * Cost-Based Query Optimization via AI Planning (AAAI 2014)
@@ -354,10 +392,14 @@ Table of Contents
 * Balsa: Learning a Query Optimizer Without Expert Demonstrations (SIGMOD 2022)
 * Leveraging Query Logs and Machine Learning for Parametric Query Optimization (VLDB 2022)
 * Deploying a Steered Query Optimizer in Production at Microsoft (SIGMOD 2022)
+* Building Learned Federated Query Optimizers (VLDB 2022 PhD Workshop)
+* Cost-based or Learning-based? A Hybrid Query Optimizer for Query Plan Selection (VLDB 2022)
+
 ## Query Execution
 ### Sort
 * The Case for a Learned Sorting Algorithm (SIGMOD 2020)
 * Defeating duplicates: A re-design of the LearnedSort algorithm (aiXiv 2021)
+* Towards Parallel Learned Sorting (arXiv 2022)
 ### Join
 * SkinnerDB : Regret-Bounded Query Evaluation via Reinforcement Learning (VLDB 2018)
 * The Case for Learned In-Memory Joins (arXiv 2021)
@@ -373,6 +415,8 @@ Table of Contents
 * ML-AQP: Query-Driven Approximate Query Processing based on Machine Learning (2020)
 * Approximate Query Processing for Group-By Queries based on Conditional Generative Models (2021)
 * Learned Approximate Query Processing: Make it Light, Accurate and Fast (CIDR 2021)
+* NeuroSketch: Fast and Approximate Evaluation of Range Aggregate Queries with Neural Networks (arXiv 2022)
+* Exploiting Machine Learning Models for Approximate Query Processing (Big Data 2022)
 ### Sheduling
 * Workload management for cloud databases via machine learning (ICDE 2016 WiseDB)
 * A learning-based service for cost and performance management of cloud databases （ICDEW 2017）(short version for WiSeDB)
@@ -380,7 +424,6 @@ Table of Contents
 * Learning Scheduling Algorithms for Data Processing Clusters (SIGCOMM 2019)
 * CrocodileDB: Efficient Database Execution through Intelligent Deferment (CIDT 2020)
 * Buffer Pool Aware Query Scheduling via Deep Reinforcement Learning (2020)
-* Polyjuice: High-Performance Transactions via Learned Concurrency Control (arXiv 2021)
 * Self-Tuning Query Scheduling for Analytical Workloads (SIGMOD 2021)
 * LSched: A Workload-Aware Learned Query Scheduler for Analytical Database Systems (SIGMOD 2022)
 
@@ -388,6 +431,7 @@ Table of Contents
 
 * Scheduling OLTP transactions via learned abort prediction (aiDM@SIGMOD 2019)
 * Scheduling OLTP Transactions via Machine Learning （2019）
+* Polyjuice: High-Performance Transactions via Learned Concurrency Control (OSDI 2021)
 ## SQL Related
 * Query2Vec (ArXiv)
 * An End-to-end Neural Natural Language Interface for Databases
@@ -400,3 +444,10 @@ Table of Contents
 * Natural language to SQL [Resource repo](https://github.com/yechens/NL2SQL)
 * LearnedSQLGen: Constraint-aware SQL Generation using Reinforcement Learning (SIGMOD 2022)
 * PreQR: Pre-training Representation for SQL Understanding (SIGMDO 2022)
+* From BERT to GPT-3 Codex: Harnessing the Potential of Very Large Language Models for Data Management (VLDB 2022)
+* A survey on deep learning approaches for text-to-SQL (VLDBJ)
+
+=================
+## Stargazers over time
+
+[![Stargazers over time](https://starchart.cc/LumingSun/ML4DB-paper-list.svg)](https://starchart.cc/LumingSun/ML4DB-paper-list)
